@@ -38,8 +38,9 @@ h1 {
  */
 
 .deck {
-    width: 660px;
-    min-height: 680px;
+    width: 100%;
+    max-width: 550px;
+    min-height: 550px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -52,8 +53,8 @@ h1 {
 }
 
 .deck .card {
-    height: 125px;
-    width: 125px;
+    height: 100px;
+    width: 100px;
     background: #2e3d49;
     font-size: 0;
     color: #ffffff;
@@ -81,14 +82,36 @@ h1 {
     font-size: 33px;
 }
 
+.deck .card.mismatch {
+    background: #f80000;
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    
+    20%, 40%, 60%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+.match-animate {
+    transform: scale(1.1);
+}
+
 /*
  * Styles for the Score Panel
  */
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    width: 100%;
+    max-width: 540px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .score-panel .stars {
@@ -104,6 +127,94 @@ h1 {
 }
 
 .score-panel .restart {
-    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     cursor: pointer;
+    min-width: 100px;
+    text-align: right;
+}
+
+.time {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+    min-width: 100px;
+    
+}
+
+
+.win-modal {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 300px;
+    height: 250px;
+    opacity: .1;
+    background: white;
+    padding: 20px 30px;
+    box-shadow: 0 0 10px #545454;
+    border-radius: 6px;
+    z-index: 3;
+}
+
+.win-modal h2 {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+.win-modal .again {
+    width: 100%;
+    background: #02ccba;
+    border-radius: 6px;
+    padding: 10px 15px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0,0%,61%,.8);
+    z-index: 1;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+/* Responsive adjustmentss */
+@media (max-width: 570px) {
+    .container {
+        padding: 0 10px;
+    }
+}
+@media (max-width: 500px) {
+    .deck .card {
+        height: 80px;
+        width: 80px;
+    }
+}
+
+@media (max-width: 410px) {
+    .deck {
+        min-height: 600px;
+    }
+}
+@media (max-width: 330px) {
+    .deck .card {
+        height: 65px;
+        width: 65px;
+    }
 }
