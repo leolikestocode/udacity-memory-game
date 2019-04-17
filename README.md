@@ -25,4 +25,3 @@ For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
  - Font Awesome
  - Google Fonts
  - Bootstrap
- - Internet connection
