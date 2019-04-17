@@ -74,6 +74,7 @@ h1 {
 
 .deck .card.show {
     font-size: 33px;
+    pointer-events: none;
 }
 
 .deck .card.match {
@@ -200,21 +201,38 @@ h1 {
         padding: 0 10px;
     }
 }
-@media (max-width: 500px) {
+@media (max-width: 499px) {
+    .deck {
+        padding: 15px;
+    }
+    .deck .card {
+        height: 90px;
+        width: 90px;
+    }
+}
+@media (max-width: 425px) {
     .deck .card {
         height: 80px;
         width: 80px;
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 380px) {
+    .deck .card {
+        height: 70px;
+        width: 70px;
+    }
     .deck {
-        min-height: 600px;
+        min-height: 450px;
     }
 }
 @media (max-width: 330px) {
     .deck .card {
         height: 65px;
         width: 65px;
+    }
+
+    .deck {
+        min-height: 400px;
     }
 }

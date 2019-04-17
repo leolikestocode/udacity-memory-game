@@ -15,10 +15,14 @@
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+This repository is the Memory Game project from Udacity.
+
+It started from the Udacity's starter code and was completed changing HTML, CSS and JavaScript.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Dependencies
-
- - Internet connection is needed
+ - Font Awesome
+ - Google Fonts
+ - Bootstrap
+ - Internet connection
