@@ -2,9 +2,15 @@
 
 ## Table of Contents
 
-* [Instructions](#instructions)
-* [Contributing](#contributing)
-* [Dependencies](#dependencies)
+  - [Live Project](https://leolikestocode.github.io/udacity-memory-game)
+  - [Project Image](#project-image)
+  - [Instructions](#instructions)
+  - [Dependencies](#dependencies)
+  - [Technologies!](#technologies)
+
+## Project Image
+
+![Memory Game Project desktop print](./img/memory_game.PNG)
 
 ## Instructions
 
@@ -13,15 +19,13 @@
  - When all the cards are matched the game is finished.
  - A modal appears so you can check your score.
 
-## Contributing
-
-This repository is the Memory Game project from Udacity.
-
-It started from the Udacity's starter code and was completed changing HTML, CSS and JavaScript.
-
-For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
-
 ## Dependencies
  - Font Awesome
  - Google Fonts
  - Bootstrap
+
+## Technologies!
+
+- HTML5
+- CSS3
+- Javascript
